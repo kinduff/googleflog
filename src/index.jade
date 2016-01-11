@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='style/stylesheet.css')
+  body
+    .header
+      .logo
+        img(src="images/googleflog.png")
+      .info
+    .content
+      .bar
+        h1 Translate
+      .wrap
+        .table
+          .tcell
+            ul.languages
+              li Spanish
+              li English
+              li.selected Detect language
+              li.more
+                .triangle
+            textarea.source(autofocus=true)#source
+          .tcell
+            ul.languages
+              li.selected Metroflog
+              li.more
+                .triangle
+            button.btn#copy Copiar a portapapeles
+            button.btn Enviar por Twitter
+            .result#result
+    .footer
+    script(src='js/app.js')

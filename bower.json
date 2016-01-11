@@ -1,0 +1,22 @@
+{
+  "name": "googleflog-app",
+  "description": "Aplicación para el traductor al estúpido idioma metroflog.",
+  "main": "",
+  "authors": [
+    "kinduff <abarcadabra@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "googleflog": "kinduff/googleflog#~1.0.1",
+    "zeroclipboard": "1.x-master"
+  }
+}
