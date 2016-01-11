@@ -20,16 +20,43 @@
               <li>Spanish</li>
               <li>English</li>
               <li class="selected">Detect language</li>
-              <li class="more">
+              <li>
                 <div class="triangle"></div>
               </li>
             </ul>
+            <button id="more" class="btn">Opciones</button>
+            <div id="options">
+              <ul class="labels">
+                <li>Sin inicio</li>
+                <li>Sin final</li>
+                <li>Sólo texto</li>
+                <li>Inicio</li>
+                <li>Final</li>
+              </ul>
+              <ul class="values">
+                <li>
+                  <input type="checkbox" name="noHead" class="option">
+                </li>
+                <li>
+                  <input type="checkbox" name="noTail" class="option">
+                </li>
+                <li>
+                  <input type="checkbox" name="noTrails" class="option">
+                </li>
+                <li>
+                  <input type="text" name="head" class="option">
+                </li>
+                <li>
+                  <input type="text" name="tail" class="option">
+                </li>
+              </ul>
+            </div>
             <textarea autofocus id="source" class="source"></textarea>
           </div>
           <div class="tcell">
             <ul class="languages">
               <li class="selected">Metroflog</li>
-              <li class="more">
+              <li>
                 <div class="triangle"></div>
               </li>
             </ul>

@@ -18,13 +18,32 @@ html
               li Spanish
               li English
               li.selected Detect language
-              li.more
+              li
                 .triangle
+            button.btn#more Opciones
+            #options
+              ul.labels
+                li Sin inicio
+                li Sin final
+                li Sólo texto
+                li Inicio
+                li Final
+              ul.values
+                li
+                  input.option(type="checkbox", name="noHead")
+                li
+                  input.option(type="checkbox", name="noTail")
+                li
+                  input.option(type="checkbox", name="noTrails")
+                li
+                  input.option(type="text", name="head")
+                li
+                  input.option(type="text", name="tail")
             textarea.source(autofocus=true)#source
           .tcell
             ul.languages
               li.selected Metroflog
-              li.more
+              li
                 .triangle
             button.btn#copy Copiar a portapapeles
             button.btn Enviar por Twitter

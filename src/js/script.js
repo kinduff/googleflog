@@ -1,15 +1,66 @@
 (function(){
-  var source = document.getElementById('source'),
-      result = document.getElementById('result'),
-      share  = document.getElementById('share'),
-      copy   = document.getElementById('copy');
+  var source    = document.getElementById('source'),
+      result    = document.getElementById('result'),
+      share     = document.getElementById('share'),
+      copy      = document.getElementById('copy'),
+      more      = document.getElementById('more');
+      options   = document.getElementById('options'),
+      optionsCb = document.getElementsByClassName('option');
 
-  source.onkeyup = function() {
-    var source = this.value;
-    var translated = googleflog.translate(source);
-    result.innerHTML = translated;
-    if (this.value <= 0) result.innerHTML = '';
+  var googleflogOptions = {
+    noHead: false,
+    noTail: false,
+    noTrails: false,
+    head: '',       
+    tail: ''        
+  }
+
+  source.onkeyup = translateInput;
+
+  document.getElementsByTagName('html')[0].onclick = function(e) {
+    var optionsContainer = e.target.closest('#options');
+    if (options.offsetWidth != 0 && !optionsContainer) {
+      options.style.display = "none"
+    }
+  }
+
+  more.onclick = function(e) {
+    e.stopPropagation();
+    if (options.offsetWidth == 0) {
+      options.style.display = "block";
+    } else {
+      options.style.display = "none"
+    }
   };
+
+  function translateInput(e) {
+    var translated = googleflog.translate(source.value, googleflogOptions);
+    result.innerHTML = translated;
+    if (source.value <= 0) result.innerHTML = '';
+  }
+
+  function processOptions() {
+    var newOptions = {};
+    for (var i = 0; i < optionsCb.length; i++) {
+      var option = optionsCb[i], value;
+      switch (option.type) {
+        case "checkbox":
+          value = option.checked;
+          break;
+        case "text":
+          value = option.value;
+          break;
+      }
+      newOptions[option.name] = value;
+    }
+    googleflogOptions = newOptions;
+    translateInput(source, googleflogOptions);
+  }
+
+  for (var i = 0; i < optionsCb.length; i++) {
+    var option = optionsCb[i];
+    option.onchange = processOptions;
+  }
 
   ZeroClipboard.config({
     moviePath: "/swf/ZeroClipboard.swf"
