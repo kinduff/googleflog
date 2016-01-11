@@ -49,6 +49,7 @@ gulp.task('images', ['clean_images'], function() {
 
 gulp.task('jade', function() {
   return gulp.src('./src/*.jade')
+    .pipe(plumber())
     .pipe(jade({
       pretty: true
     }))

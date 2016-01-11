@@ -65,7 +65,7 @@
 
   twitter.onclick = function(e) {
     var twitterUrl = "http://twitter.com/share?url=nothx&text="
-    var translatedText = result.innerText;
+    var translatedText = result.innerHTML;
     window.open(twitterUrl + translatedText, 'twitter-share', 'width=550,height=235');
     return false;
   }
@@ -76,15 +76,15 @@
   client = new ZeroClipboard(copy);
   client.on({
     dataRequested: function(c,a) {
-      var textToCopy = result.innerText;
+      var textToCopy = result.innerHTML;
       c.setText(textToCopy);
     },
     complete: function(c,a) {
       _this = this;
       _this.className = 'btn green';
-      _this.innerText = '¡Copiado con éxito!';
+      _this.innerHTML = '¡Copiado con éxito!';
       setTimeout(function() {
-        _this.innerText = 'Copiar a portapapeles';
+        _this.innerHTML = 'Copiar a portapapeles';
         _this.className = 'btn';
       }, 2500);
     }

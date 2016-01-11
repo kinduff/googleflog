@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Googleflog</title>
+    <meta name="description" content="">
+    <link rel="canonical" href="">
+    <link rel="alternate" type="application/rss+xml" title="" href="">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" href="style/stylesheet.css">
   </head>
   <body>
@@ -31,7 +38,7 @@
                 <div class="triangle"></div>
               </li>
             </ul>
-            <button id="more" class="btn">Opciones</button>
+            <button id="more" class="btn">Opciones</button><a id="info" href="">?</a>
             <div id="options">
               <ul class="labels">
                 <li>Sin inicio</li>
@@ -81,11 +88,23 @@
             <div id="result" class="result"></div>
           </div>
         </div>
+        <div class="table">
+          <div class="tcell">
+            <div class="iNeedToEat"><ins style="display:block" data-ad-client="ca-pub-9434326215491415" data-ad-slot="5917480751" data-ad-format="auto" class="adsbygoogle"></ins></div>
+          </div>
+          <div class="tcell"></div>
+        </div>
       </div>
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+      <ul class="footer-links">
+        <li>Done with ♥ by Kinduff</li>
+      </ul>
+    </div>
     <div id="fb-root"></div>
+    <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
+      // Facebook
       (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
@@ -93,7 +112,12 @@
       js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=249794381729144";
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
+      
+      // Twitter
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+      
+      // Adsense
+      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     <script src="js/app.js"></script>
   </body>
