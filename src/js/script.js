@@ -5,6 +5,7 @@
       copy      = document.getElementById('copy'),
       more      = document.getElementById('more');
       options   = document.getElementById('options'),
+      twitter   = document.getElementById('twitter'),
       optionsCb = document.getElementsByClassName('option');
 
   var googleflogOptions = {
@@ -60,6 +61,13 @@
   for (var i = 0; i < optionsCb.length; i++) {
     var option = optionsCb[i];
     option.onchange = processOptions;
+  }
+
+  twitter.onclick = function(e) {
+    var twitterUrl = "http://twitter.com/share?url=nothx&text="
+    var translatedText = result.innerText;
+    window.open(twitterUrl + translatedText, 'twitter-share', 'width=550,height=235');
+    return false;
   }
 
   ZeroClipboard.config({
