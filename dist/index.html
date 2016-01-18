@@ -31,18 +31,16 @@
         <div class="table">
           <div class="tcell">
             <ul class="languages">
-              <li>Spanish</li>
+              <li class="hide-md">Spanish</li>
               <li>English</li>
               <li class="selected">Detect language</li>
               <li>
                 <div class="triangle"></div>
               </li>
             </ul>
-            <button id="more" class="btn">Opciones</button><a id="info" href="">?</a>
+            <button id="more" class="btn">Opciones</button>
             <div id="options">
               <ul class="labels">
-                <li>Sin inicio</li>
-                <li>Sin final</li>
                 <li>Solo texto</li>
                 <li>Inicio</li>
                 <li>Final</li>
@@ -50,19 +48,7 @@
               <ul class="values">
                 <li>
                   <div class="onoffswitch">
-                    <input type="checkbox" name="noHead" id="noHead" class="onoffswitch-checkbox">
-                    <label for="noHead" class="onoffswitch-label"></label>
-                  </div>
-                </li>
-                <li>
-                  <div class="onoffswitch">
-                    <input type="checkbox" name="noTail" id="noTail" class="onoffswitch-checkbox">
-                    <label for="noTail" class="onoffswitch-label"></label>
-                  </div>
-                </li>
-                <li>
-                  <div class="onoffswitch">
-                    <input type="checkbox" name="noTrails" id="noTrails" class="onoffswitch-checkbox">
+                    <input type="checkbox" name="noTrails" id="noTrails" class="option onoffswitch-checkbox">
                     <label for="noTrails" class="onoffswitch-label"></label>
                   </div>
                 </li>
@@ -85,7 +71,7 @@
             </ul>
             <button id="copy" class="btn">Copiar a portapapeles</button>
             <button id="twitter" class="btn">Enviar por Twitter</button>
-            <div id="result" class="result"></div>
+            <div id="result" contenteditable="" class="result"></div>
           </div>
         </div>
         <div class="table">
@@ -98,7 +84,8 @@
     </div>
     <div class="footer">
       <ul class="footer-links">
-        <li>Done with ♥ by Kinduff</li>
+        <li>Coded in 2013. Refactored in 2016.</li>
+        <li>Done with ♥ by <a href="http://kinduff.com">Kinduff</a></li>
       </ul>
     </div>
     <div id="fb-root"></div>

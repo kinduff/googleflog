@@ -27,33 +27,21 @@ html
         .table
           .tcell
             ul.languages
-              li Spanish
+              li.hide-md Spanish
               li English
               li.selected Detect language
               li
                 .triangle
             button.btn#more Opciones
-            a#info(href="")
-              | ?
             #options
               ul.labels
-                li Sin inicio
-                li Sin final
                 li Solo texto
                 li Inicio
                 li Final
               ul.values
                 li
                   .onoffswitch
-                    input.onoffswitch-checkbox(type="checkbox", name="noHead" id="noHead")
-                    label.onoffswitch-label(for='noHead')
-                li
-                  .onoffswitch
-                    input.onoffswitch-checkbox(type="checkbox", name="noTail" id="noTail")
-                    label.onoffswitch-label(for='noTail')
-                li
-                  .onoffswitch
-                    input.onoffswitch-checkbox(type="checkbox", name="noTrails" id="noTrails")
+                    input.option.onoffswitch-checkbox(type="checkbox", name="noTrails" id="noTrails")
                     label.onoffswitch-label(for='noTrails')
                 li
                   input.option(type="text", name="head" id="head")
@@ -67,7 +55,7 @@ html
                 .triangle
             button.btn#copy Copiar a portapapeles
             button.btn#twitter Enviar por Twitter
-            .result#result
+            .result#result(contenteditable="")
         .table
           .tcell
             .iNeedToEat
@@ -75,7 +63,12 @@ html
           .tcell
     .footer
       ul.footer-links
-        li Done with ♥ by Kinduff
+        li Coded in 2013. Refactored in 2016.
+        li
+          | Done with ♥ by 
+          a(href="http://kinduff.com") Kinduff
+        //- li
+        //-   a(href="#") Read the blog post
     #fb-root
     script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
     script.
@@ -87,7 +80,7 @@ html
       js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=249794381729144";
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-
+  
       // Twitter
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 

@@ -55,7 +55,7 @@
       newOptions[option.name] = value;
     }
     googleflogOptions = newOptions;
-    translateInput(source, googleflogOptions);
+    translateInput(source);
   }
 
   for (var i = 0; i < optionsCb.length; i++) {
@@ -65,7 +65,7 @@
 
   twitter.onclick = function(e) {
     var twitterUrl = "http://twitter.com/share?url=nothx&text="
-    var translatedText = result.innerHTML;
+    var translatedText = result.innerText;
     window.open(twitterUrl + translatedText, 'twitter-share', 'width=550,height=235');
     return false;
   }
@@ -76,7 +76,7 @@
   client = new ZeroClipboard(copy);
   client.on({
     dataRequested: function(c,a) {
-      var textToCopy = result.innerHTML;
+      var textToCopy = result.innerText;
       c.setText(textToCopy);
     },
     complete: function(c,a) {
@@ -89,4 +89,8 @@
       }, 2500);
     }
   });
+
+  result.onclick = function() {
+    document.execCommand('selectAll', false, null);
+  }
 })();
