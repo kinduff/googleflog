@@ -59,7 +59,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['js', 'swf', 'css', 'images', 'jade']);
-gulp.task('deploy', ['default'], function() {
+gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
-    .pipe(ghPages({ push: false }));
+    .pipe(ghPages());
 });
