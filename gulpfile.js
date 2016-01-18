@@ -6,11 +6,6 @@ var jade = require('gulp-jade');
 var ghPages = require('gulp-gh-pages');
 var plumber = require('gulp-plumber');
 
-function swallowError(error) {
-  console.log(error.toString());
-  this.emit('end');
-}
-
 gulp.task('swf', function() {
   return gulp.src('./bower_components/zeroclipboard/ZeroClipboard.swf')
     .pipe(gulp.dest('./dist/swf'));
