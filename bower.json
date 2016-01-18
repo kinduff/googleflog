@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "googleflog": "kinduff/googleflog#~1.0.1",
+    "googleflog": "kinduff/googleflog-pkg#~1.0.3",
     "zeroclipboard": "1.x-master"
   }
 }
