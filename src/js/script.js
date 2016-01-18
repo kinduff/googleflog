@@ -71,7 +71,7 @@
   }
 
   ZeroClipboard.config({
-    moviePath: "/swf/ZeroClipboard.swf"
+    moviePath: "/googleflog/swf/ZeroClipboard.swf"
   });
   client = new ZeroClipboard(copy);
   client.on({
