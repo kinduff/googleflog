@@ -1,3 +1,8 @@
+# Googleflog
+Back in 2013 I built a small clone of Google Translator called Googleflog. The application was pretty simple, it “translated” human sentences or words into a “zh0omeE meEzhzhy up zhHiiT”.
+
+This is the refactor I did just to give it some love.
+
 ## Gulp tasks
 This application includes the following gulp tasks.
 
